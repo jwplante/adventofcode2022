@@ -1,5 +1,5 @@
 import sys
-from typing import Iterator
+from typing import Sequence
 
 """
 Advent of Code Day 3 Solution
@@ -19,7 +19,7 @@ def get_priority(item_type: str) -> int:
     priority_offset = 27 if is_upper else 1
     return ord(item_type) - ascii_offset + priority_offset
 
-def part_one(lines: Iterator[str]):
+def part_one(lines: Sequence[str]):
     final_answer = 0
     for rucksack in lines:
         rucksack = rucksack.strip()
@@ -35,7 +35,7 @@ def part_one(lines: Iterator[str]):
     print(f"Solution for Part 1: {final_answer}")
 
 
-def part_two(lines: Iterator[str]):
+def part_two(lines: Sequence[str]):
     final_answer = 0
     lines = [line.strip() for line in lines]
     for group in range(0, len(lines), 3):
