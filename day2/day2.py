@@ -1,5 +1,6 @@
 from enum import Enum
 import sys
+from typing import Iterator
 
 """
 Advent of Code Day 2 Solution
@@ -46,7 +47,7 @@ def play_turn(your_move: GameChoice, opponent_move: GameChoice) -> int:
     return shape_value[your_move] + possible_outcomes[your_move][opponent_move]
 
 
-def part_one(contents: str):
+def part_one(contents: Iterator[str]):
     def char_to_move(move: str) -> GameChoice:
         """
         Gets the corresponding move based on the letter provided
@@ -68,7 +69,7 @@ def part_one(contents: str):
     print(f"Solution for Part 1: {total_score}")
 
 
-def part_two(contents: str):
+def part_two(contents: Iterator[str]):
     def char_to_move(move: str) -> GameChoice:
         """
         Gets the corresponding move based on the letter provided

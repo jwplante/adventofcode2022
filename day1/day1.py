@@ -1,4 +1,5 @@
 import sys
+from typing import Iterator
 
 """
 Advent of Code Day 1 Solution
@@ -7,7 +8,7 @@ Advent of Code Day 1 Solution
 __author__ = "James Plante (jwplante)"
 __license__ = "MIT"
 
-def part_one(contents: str):
+def part_one(contents: Iterator[str]):
     max_cal_so_far = float('-inf')
 
     acc = 0
@@ -21,7 +22,7 @@ def part_one(contents: str):
 
     print(f"Solution for part 1: {max_cal_so_far}")
 
-def part_two(contents: str):
+def part_two(contents: Iterator[str]):
     elves = []
 
     acc = 0
