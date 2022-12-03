@@ -15,7 +15,7 @@ class GameChoice(Enum):
 
 def play_turn(your_move: GameChoice, opponent_move: GameChoice) -> int:
     """
-    Plays a Turn of Tic-tac-toe and returns the final score.
+    Plays a Turn of Rock Paper Scissors and returns the final score.
     :param your_move: Your Move
     :param opponent_move: Your opponent's move
     :return: Final score for the round
