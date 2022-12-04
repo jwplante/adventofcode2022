@@ -130,3 +130,6 @@ dmypy.json
 
 # AOC text files
 *.in.txt
+
+# VSCode project files
+.vscode/*
