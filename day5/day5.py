@@ -1,6 +1,6 @@
 import re
 import sys
-from typing import List, Optional, Tuple
+from typing import List, Tuple
 
 """
 Advent of Code 2022 Day 5 Solution
@@ -71,9 +71,8 @@ def parse(input_str: str) -> Tuple[Dock, List[Tuple[int, int]]]:
         
         # Parse the rest of the input and insert into stacks
         stack_lines = lines[-2::-1] 
-        stack_pattern = re.compile(r"[(\w+)]")
         for stack in stack_lines:
-            for result in re.finditer(stack_pattern, stack):
+            for result in re.finditer("\w+", stack):
                 # Depending on char position, put in the correct stack
                 stack_to_put = result.start() // 4
                 dock.stacks[stack_to_put].push(result.group())
